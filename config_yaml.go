@@ -151,7 +151,6 @@ func (c *ConfigEngine) GetFloat64(name string) float64 {
 // 从配置文件中获取Struct类型的值,这里的struct是你自己定义的根据配置文件
 func (c *ConfigEngine) GetStruct(name string,s interface{}) interface{}{
 	d := c.Get(name)
-	fmt.Println(d)
 	switch d.(type){
 	case string:
 		c.setField(s,name,d)
