@@ -1,14 +1,14 @@
 // 可以用于处理读yaml格式的配置文件，同时也可以用于理解golang中的反射
-package config_yaml
+package yamlConfig
 
 import (
-	"strings"
 	"errors"
-	"io/ioutil"
-	"gopkg.in/yaml.v2"
-	"reflect"
 	"fmt"
+	"gopkg.in/yaml.v2"
+	"io/ioutil"
+	"reflect"
 	"strconv"
+	"strings"
 )
 
 type ConfigEngine struct {
@@ -16,7 +16,7 @@ type ConfigEngine struct {
 }
 
 
-// 将ymal文件中的内容进行加载
+// 将yaml文件中的内容进行加载
 func (c *ConfigEngine) Load (path string) error {
 	ext := c.guessFileType(path)
 	if ext == "" {
