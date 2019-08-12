@@ -3,10 +3,21 @@ server:
       port: 80
 
 mysql:
-      username: root
-      password: 123456
-      database: mydb
-      host: 127.0.0.1
-      port: 3306
-      timeout: 1.2
+      UserName: root
+      PassWord: 123456
+      DataBase: mydb
+      Host: 127.0.0.1
+      Port: 3306
+      TimeOut: 1.2
+
+app: myApp
+mode: dev
+enable: true
+port: 8080
+timeout: 0.3
+
+hotwords:
+      - docker
+      - golang
+      - python
 
